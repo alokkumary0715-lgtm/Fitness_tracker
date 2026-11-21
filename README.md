@@ -2,21 +2,31 @@
 
 An end-to-end machine learning data preparation pipeline for wearable fitness sensor data (accelerometer and gyroscope streams), structured with clean separation between raw inputs, intermediate resampled datasets, and processed modeling features.
 
-## Project Structure
+Read Raw CSVs — Accelerometer & Gyroscope files.
 
-```text
-fitness_project/
-├── data/
-│   ├── raw/                  # Original raw sensor CSV/log files (ignored in Git)
-│   ├── interim/              # Resampled time-series outputs (e.g., processed_data.pkl)
-│   └── processed/            # Feature-engineered datasets ready for model training
-├── src/
-│   └── data/
-│       └── make_dataset.py   # Ingestion, 5 Hz (200 ms) resampling, and pickle export
-├── .gitignore
-├── requirements.txt
-└── README.md
-```
+
+
+Extract Metadata — Participant, label, category, set.
+
+
+
+Combine Files — All sensor CSVs concatenate kiye.
+
+
+
+Datetime Conversion — Epoch timestamp ko DatetimeIndex banaya.
+
+
+
+Merge Sensors — Accelerometer + Gyroscope.
+
+
+
+Resampling — 200ms / 5Hz.
+
+
+
+Export — data/interim/processed_data.pkl.
 
 ## Data Pipeline Overview
 
