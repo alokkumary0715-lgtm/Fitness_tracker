@@ -1,0 +1,9 @@
+
+numpy>=2.0
+pandas>=2.2
+ipykernel>=6.29
+ipython>=8.26
+jupyter-client>=8.6
+jupyter-core>=5.7
+matplotlib>=3.9
+bottleneck>=1.4
